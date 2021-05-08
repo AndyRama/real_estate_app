@@ -17,16 +17,16 @@
     
     <% if @show_sidebar.nil? %> 
    <header>
-      <%= render "layouts/nav/public"%>
+      <%= render "shared/nav/public"%>
         <%= yield %>  
     </header>
    <% else %>
-     <%= render "layouts/nav/dashboard"%>
+     <%= render "shared/nav/dashboard"%>
 
       <div class="container-fluid">
         <div class="row">
 
-          <%= render "layouts/nav/sidebar" %> 
+          <%= render "shared/nav/sidebar" %> 
           <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 mt-4">       
             <%= yield %>
           </main> 
@@ -34,6 +34,6 @@
       </div>      
 
     <% end %>
-    <div id="notifications"><%= flash_notifications %></div>
+    
   </body>
 </html>
