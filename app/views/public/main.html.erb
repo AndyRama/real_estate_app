@@ -1,0 +1,116 @@
+<main role="main" class="main-banner" id ="home-banner">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4"> Search for a new home today...</h1>
+      <p>Choose from hundreds of beautiful bungalows, apartements and condominiums.</p>
+      <p><a id="btn-banner" href="/for_sale">View Properties for sale</a></p>
+    </div>
+  </div>  
+  <section id="lastest-properties" class="mb-4" >
+    <div class="container">
+      <div class="row col">
+        <%# <div class="col"> %>
+          <h3 class=" mb-4">Featured Properties</h3>
+        <%# </div> %>
+      </div>
+      <div class="row">
+        <%= render "properties/list", properties: @properties %>
+      </div>
+    </div>
+    </div>
+    <hr>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row text-center pt-5 pb-5 mb-5 bg-light">
+        <div class="col-md-4">
+          <h3>Most Properties</h3>
+          <p>The most comprehensive property listings for sale. Search condos, terrace houses, apartments, bungalows, semi-d or more.</p>       
+        </div>
+        <div class="col-md-4">
+          <h3>Most Rentals</h3>
+          <p>Looking to rent a home in a condo, apartment, studio apartment or terrace? We have the most comprehensive property listings in your area. </p>
+        </div>
+        <div class="col-md-4">
+          <h3>Property News</h3>
+          <p>Stay up to date on the property market with our informative blog posts. Get helpful tips on mortgages, choosing a property and more.</p>
+        </div>
+      </div>
+    </div> 
+    <hr>
+  </section>
+  <section id="sale-properties" class="mb-1" >
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class=" mb-4">Latest Properties for Sale</h2>
+          <p>Luxury villas, condos, detached and semi-detached properties. Browse our exclusive range of for sale units.</p>
+        </div>
+      </div>
+      <div class="row">
+        <%= render "properties/list", properties: @properties.for_sale %>
+      </div>
+    </div>
+    <hr>
+  </div>
+  </section>
+  <section id="latest-posts" class="mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 class="mb-4">Latest News</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
+          <div class="property border">
+            <div class="property-summary p-3">
+              <h3 class="h5"><a class="text-dark" href="posts/3">Best Time to Buy Property in 2020</a></h3>
+              <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed ...</p>
+              <p class="mt-2">
+                <span class="text-muted mr-3"><span class="fas fa-clock"></span> posted 10 months ago</span>
+                <a href="blog">Continue Reading</a> 
+              </p>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
+        <div class="property border">
+          <div class="property-summary p-3">
+            <h3 class="h5"><a class="text-dark" href="posts/4">Real Location property Secrets for Success</a></h3>
+            <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed ...</p>
+            <p class="mt-2">
+              <span class="text-muted mr-3"><span class="fas fa-clock"></span> posted 10 months ago</span>
+              <a href="blog">Continue Reading</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
+        <div class="property border">
+          <div class="property-summary p-3">
+            <h3 class="h5"><a class="text-dark" href="posts/2">Buying Your First Home</a></h3>
+            <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur ...</p>
+            <p class="mt-2">
+              <span class="text-muted mr-3"><span class="fas fa-clock"></span> posted 10 months ago</span>
+              <a href="blog">Continue Reading</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
+        <div class="property border">
+          <div class="property-summary p-3">
+            <h3 class="h5"><a class="text-dark" href="posts/1">How to Find Your Dream Home</a></h3>
+            <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed ...</p>
+            <p class="mt-2">
+              <span class="text-muted mr-3"><span class="fas fa-clock"></span> posted 10 months ago</span>
+              <a href="blog">Continue Reading</a>
+            </p>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <%= render "layouts/footer" %>
+  </section>
+</main>
