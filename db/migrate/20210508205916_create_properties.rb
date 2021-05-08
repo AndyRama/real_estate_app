@@ -4,7 +4,7 @@ class CreateProperties < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :address
       t.string :photo
-      t.string :status
+      t.string :status, default:"available"
       t.integer :price
       t.integer :rooms
       t.integer :bathrooms
