@@ -1,0 +1,45 @@
+<div class="container">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="logo">
+      <%= image_tag "logo.jpg" %>
+    </div>
+    <a class="navbar-brand" href="/home">LocationProperty</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <% if user_signed_in? %>
+            <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+          <% else %>
+            <a class="nav-link" aria-current="page" href="/home">Home</a>
+          <% end %>   
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/feature">Feature</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/for_sale">For Sale</a>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Blog", blog_path, class: "nav-link" %>        
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/advertise">Advertise</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+        <% if user_signed_in? %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-secondary float-sm-right" %> 
+        <% else %>        
+          <%= link_to "Log In", new_user_session_path, id:"btn-login", class:"btn btn-secondary mr-2 float-sm-right"%>
+          <%= link_to "Sign Up", new_user_registration_path, id:"btn-Sign", class: "btn btn-success float-sm-right" %>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</div>
