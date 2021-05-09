@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_08_211736) do
+ActiveRecord::Schema.define(version: 2021_05_09_151135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.string "summary"
+    t.string "image"
+    t.text "body"
+    t.boolean "active", default: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "properties", force: :cascade do |t|
     t.string "name"
@@ -30,6 +41,9 @@ ActiveRecord::Schema.define(version: 2021_05_08_211736) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "details"
+    t.string "intro"
+    t.string "image_ext"
+    t.string "image_int"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 

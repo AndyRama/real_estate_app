@@ -1,0 +1,14 @@
+// navbar btn
+#btn-banner {
+  color: black;
+  padding: 10px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+#btn-banner:hover {
+  background: #1BCB7F;
+  color: white;
+}

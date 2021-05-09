@@ -1,0 +1,22 @@
+<main role="main" class="main-banner" id="sale-banner">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">Property For Sales</h1>
+      <p>Browse our extensive range of properties for sale. From studio apartments to luxury villas.</p>
+    </div>
+  </div>
+</main>
+<section id="sale-properties" class="mb-4" >
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class=" mb-4 mt-4"></h2>
+      </div>
+    </div>
+    <div class="row">
+      <%= render "properties/list", properties: @properties.for_sale %>
+    </div>
+  </div>
+  <hr>
+  <%= render "shared/footer" %>
+</section>

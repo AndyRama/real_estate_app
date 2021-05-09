@@ -1,0 +1,23 @@
+<main role="main" class="main-banner" id="feature-banner">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">Lastest Properties</h1>
+      <p>Stay up to date with latest property news at Property Location !</p>
+    </div>
+  </div>
+</main>
+<section id="lastest-properties" class="mb-4 mt-3" >
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <h3 class=" mb-4"></h3>
+      </div>
+    </div>
+    <div class="row">
+      <%= render "properties/list", properties: @properties %>
+    </div>
+  </div>
+  <hr>
+</section>
+
+<%= render "shared/footer" %>
