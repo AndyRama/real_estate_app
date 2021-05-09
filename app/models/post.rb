@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   has_one_attached :image
 
-  # validation pour le formulaire creation d'une propriété
+  # validation pour le formulaire creation de post
 
   validates :title, presence: true
   validates :url, presence: true

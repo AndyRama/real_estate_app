@@ -2,7 +2,7 @@ class PropertiesController < ApplicationController
   before_action :set_property, only: %i[show edit update destroy]
   before_action :authenticate_user!, only: %i[new create update destroy]
   before_action :set_sidebar, except: [:show]
- 
+
   def index
     if current_user.admin?
       @properties = Property.all
@@ -15,15 +15,15 @@ class PropertiesController < ApplicationController
     @user = @property.user
     @agent_properties = Property.where(user_id: @user.id).where.not(id: @property.id)
 
-    # @properties = Property.where.not(latitude: nil, longitude: nil)
+    @properties = Property.where.not(latitude: nil, longitude: nil)
     # the `geocoded` scope filters only property with coordinates (latitude & longitude)
-    # @markers = @properties.geocoded.map do |property|
-      # {
-      #   lat: property.latitude,
-      #   lng: property.longitude,
-      #   infowindow: render_to_string(partial: "info_window", locals: { property: property })
-      # }
-    # end
+    @markers = @properties.geocoded.map do |property|
+      {
+        lat: property.latitude,
+        lng: property.longitude,
+        infowindow: render_to_string(partial: "info_window", locals: { property: property })
+      }
+    end
   end
 
   def new

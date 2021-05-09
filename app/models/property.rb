@@ -6,8 +6,8 @@ class Property < ApplicationRecord
 
   # Geocode adr => latitude,longitude
 
-  # geocoded_by :address
-  # after_validation :geocode
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   # validation pour le formulaire creation d'une propriété
 
