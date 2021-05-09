@@ -21,10 +21,27 @@ ActiveStorage.start()
 // External imports
 import "bootstrap";
 
+
+var jQuery = require("jquery");
+global.$ = global.jQuery = jQuery
+window.$ = window.jQuery = jQuery
+
+import toastr from 'toastr';
+  toastr.options = {
+    progressBar: true
+  }
+global.toastr = toastr;
+
+// require("./includes/properties");
+
+// import 'mapbox-gl/dist/mapbox-gl.css';
+// import { initMapbox } from '../plugins/init_mapbox';
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  //  initMapbox();
 });

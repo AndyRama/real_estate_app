@@ -4,7 +4,7 @@ class PropertiesController < ApplicationController
   before_action :set_sidebar, except: [:show]
   # authorize @property
 
-def index
+  def index
     if current_user.admin?
       @properties = Property.all
     else
