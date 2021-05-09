@@ -9,12 +9,10 @@
   <section id="lastest-properties" class="mb-4" >
     <div class="container">
       <div class="row col">
-        <%# <div class="col"> %>
           <h3 class=" mb-4">Featured Properties</h3>
-        <%# </div> %>
       </div>
       <div class="row">
-        <%#= render "properties/list", properties: @properties %>
+        <%= render "properties/list", properties: @properties %>
       </div>
     </div>
     </div>
@@ -48,7 +46,7 @@
         </div>
       </div>
       <div class="row">
-        <%#= render "properties/list", properties: @properties.for_sale %>
+        <%= render "properties/list", properties: @properties.for_sale %>
       </div>
     </div>
     <hr>
@@ -111,6 +109,6 @@
         </div>
       </div> 
     </div>
-    <%= render "shared/footer" %>
+    <%= render "layouts/footer" %>
   </section>
 </main>

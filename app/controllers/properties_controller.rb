@@ -2,8 +2,7 @@ class PropertiesController < ApplicationController
   before_action :set_property, only: %i[show edit update destroy]
   before_action :authenticate_user!, only: %i[new create update destroy]
   before_action :set_sidebar, except: [:show]
-  # authorize @property
-
+ 
   def index
     if current_user.admin?
       @properties = Property.all

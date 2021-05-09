@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-    <%#= favicon_link_tag asset_path('logo.jpg') %>
+    <%= favicon_link_tag asset_path('logo.jpg') %>
   </head>
 
   <body id="<%= controller.controller_name %>" class="<%=controller.action_name%> <%= "show-sidebar" if @show_sidebar.present? %> ">
@@ -34,6 +34,6 @@
       </div>      
 
     <% end %>
-    
+    <div id="notification"><%= flash_notifications %></div>
   </body>
 </html>

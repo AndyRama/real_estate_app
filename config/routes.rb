@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'public#main'
 
   devise_for :users
 

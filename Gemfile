@@ -39,10 +39,12 @@ gem 'cloudinary', '~> 1.16.0'
 
 # image resizing
 gem 'mini_magick'
-
+# gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
+
 gem 'simple_form'
+gem 'figaro'
 
 group :development, :test do 
   gem 'pry-byebug'

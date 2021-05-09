@@ -1,5 +1,4 @@
 class PublicController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [:main]
   before_action :authenticate_user!, except: %i[home]
 
   def main
