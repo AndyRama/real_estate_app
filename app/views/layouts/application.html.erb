@@ -17,16 +17,16 @@
     
     <% if @show_sidebar.nil? %> 
    <header>
-      <%= render "shared/nav/public"%>
+      <%= render "layouts/nav/public"%>
         <%= yield %>  
     </header>
    <% else %>
-     <%= render "shared/nav/dashboard"%>
+     <%= render "layouts/nav/dashboard"%>
 
       <div class="container-fluid">
         <div class="row">
 
-          <%= render "shared/nav/sidebar" %> 
+          <%= render "layouts/nav/sidebar" %> 
           <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 mt-4">       
             <%= yield %>
           </main> 

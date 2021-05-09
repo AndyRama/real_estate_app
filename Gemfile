@@ -35,7 +35,7 @@ gem 'carrierwave', "0.10.0"
 gem 'fog', '~> 1.37.0'
 
 # image upload cloudinary
-# gem 'cloudinary', '~> 1.16.0'
+gem 'cloudinary', '~> 1.16.0'
 
 # image resizing
 gem 'mini_magick'
@@ -44,7 +44,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
-group :development, :test do  gem 'pry-byebug'
+group :development, :test do 
+  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
 

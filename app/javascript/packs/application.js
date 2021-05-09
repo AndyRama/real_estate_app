@@ -32,7 +32,7 @@ import toastr from 'toastr';
   }
 global.toastr = toastr;
 
-// require("./includes/properties");
+require("./includes/properties");
 
 // import 'mapbox-gl/dist/mapbox-gl.css';
 // import { initMapbox } from '../plugins/init_mapbox';
