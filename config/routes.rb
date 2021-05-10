@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :posts
   resources :properties
 
+  get "/product" => "pages#product", as: :product
+  
   get "/home" => "pages#home", as: :home
 
   get "/compte" => "pages#compte", as: :compte

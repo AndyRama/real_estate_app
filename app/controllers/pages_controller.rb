@@ -6,17 +6,11 @@ class PagesController < ApplicationController
     @posts = Post.latest
   end
 
-  def avertise
-  end
-
   def for_sale
     @properties = Property.where(for_sale: true)
   end
 
   def feature
     @properties = Property.latest
-  end
-
-  def contact
   end
 end

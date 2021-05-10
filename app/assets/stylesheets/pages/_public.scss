@@ -40,12 +40,18 @@ body {
 #home-banner .jumbotron { 
   background: image-url("banner-home.jpg") no-repeat center center;
   background-size: cover ;
-  height: 400px;
+  height: 300px;
 }
 
 #blog-banner .jumbotron {
   background: image-url("banner-blog.jpg") no-repeat center center;
   background-size: cover ;
+}
+
+#mvp-banner .jumbotron {
+  background: image-url("banner-mvp.jpg") no-repeat center center;
+  background-size: cover ;
+  height: 250px;
 }
 
 .main-banner .jumbotron {

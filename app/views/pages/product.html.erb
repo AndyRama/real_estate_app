@@ -1,0 +1,70 @@
+<main role="main" class="main-banner" id ="mvp-banner">
+  <div class="jumbotron"></div>
+  <div class="container m-t-30">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="product-main-img">
+          <img class="img-fluid img-thumbnail" src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/34/Screen_Shot_2020-06-23_at_15.58.06.png" />
+        </div>
+        <div class="product-thumbnails">
+        <div class="row">
+          <div class="col-4 m-b-10">
+            <img class="m-0 active" data-src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/34/Screen_Shot_2020-06-23_at_15.58.06.png" src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/34/thumb_Screen_Shot_2020-06-23_at_15.58.06.png" />
+          </div>
+          <div class="col-4 m-b-10">
+            <img class="m-0 " data-src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/39/Screen_Shot_2020-06-23_at_16.05.16.png" src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/39/thumb_Screen_Shot_2020-06-23_at_16.05.16.png" />
+          </div>
+          <div class="col-4 m-b-10">
+            <img class="m-0 " data-src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/40/Screen_Shot_2020-06-23_at_16.06.34.png" src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/40/thumb_Screen_Shot_2020-06-23_at_16.06.34.png" />
+          </div>
+          <div class="col-4 m-b-10">
+            <img class="m-0 " data-src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/35/Screen_Shot_2020-06-23_at_15.58.59.png" src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/35/thumb_Screen_Shot_2020-06-23_at_15.58.59.png" />
+          </div>
+          <div class="col-4 m-b-10">
+            <img class="m-0 " data-src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/36/Screen_Shot_2020-06-23_at_16.00.01.png" src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/36/thumb_Screen_Shot_2020-06-23_at_16.00.01.png" />
+          </div>
+          <div class="col-4 m-b-10">
+            <img class="m-0 " data-src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/38/Screen_Shot_2020-06-23_at_16.04.19.png" src="https://david-battersby.s3.amazonaws.com/uploads/product_image/image/38/thumb_Screen_Shot_2020-06-23_at_16.04.19.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <form class="new_order_item" id="new_order_item" action="/order_items" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="veKv68sIWdp6pRRsTtwh3A0j2+sTpcalsbRbW97Njx5nLS/HCHhrr6h1U2TYPoYvxhNHufTvWEAvrIhoqgmQUg==" />
+        <input type="hidden" name="order_item[product_id]" id="order_item_product_id" value="1" />
+        <input type="hidden" name="order_item[quantity]" id="order_item_quantity" value="1" />
+
+        <p class="h4 text-uppercase text-orange">Product Details</p>
+        <p class="font-18 text-muted">Get the starter code for your project</p>
+        <p>Allow users to browse existing properties, create an account, sign in and post their own properties. Users can visit their own dashboard to see their properties and scheduled viewings.</p>
+        <p><strong>Functionality included:</strong></p>
+
+        <p>- Browse existing properties
+        <br />- Sign up / sign in / forgot password
+        <br />- Upload new properties
+        <br />- User dashboard to view properties</p>
+
+        <p><strong>About the code:</strong></p>
+
+        <p>- Built with Ruby on Rails 6
+        <br />- Ready to deploy to live website
+        <br />- Instructions on how to setup included</p>
+
+        <p><strong>Need help with your MVP?</strong></p>
+
+        <p>- We've included requirements for finding a developer
+        <br />- We can quote for additional custom work</p>
+
+        <div class="m-t-30">
+          <input type="submit" name="commit" value="Add to Cart" class="btn btn-success btn-lg font-20 pull-left m-b-30 m-r-5" data-disable-with="Add to Cart" />
+        
+          <p class="product-price font-28 m-b-10 brandon-bold text-black m-l-15 pull-left">
+            $199.00<s class="m-l-10 font-18 text-muted">$299.00</s>
+          </p>
+        </div>
+      </form> 
+    </div>
+  </div>
+</div>
+
+<%= render "layouts/footer" %>
