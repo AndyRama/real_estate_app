@@ -42,7 +42,7 @@ gem 'fog', '~> 1.37.0'
 gem 'cloudinary', '~> 1.16.0'
 
 # Map address translate with geocoder
-gem 'geocoder'
+# gem 'geocoder'
 
 # image resizing
 gem 'mini_magick'

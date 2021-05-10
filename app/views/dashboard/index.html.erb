@@ -24,15 +24,13 @@
       <tr>
         <th>Property Location</th>
         <th>Address</th>
-        <th>satuts</th>
         <th>Price</th>
         <th>Rooms</th>
         <th>Bathrooms</th>
-        <th>Parking</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <%# <tr>
         <td>Penthouse @ West End</td>
         <td>12 Irving street, West End, London, WC2H 7AZ, United K</td>
         <td>For sale</td>
@@ -103,7 +101,19 @@
         <td>6</td>
         <td>2</td>
         <td>2</td>
+      </tr> %>
+  
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.name %></td>
+        <td><%= property.address %></td>
+        <td><%= property.price %>€</td>
+        <td><%= property.rooms %></td>
+        <td><%= property.bathrooms %></td>
+       
       </tr>
+    <% end %>
+  
     </tbody>
   </table>
 </div>

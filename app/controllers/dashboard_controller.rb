@@ -2,6 +2,7 @@ class DashboardController < ApplicationController
   before_action :set_sidebar, except: [:show]
 
   def index
+    @properties = current_user.properties.all
   end
 
   def profile
