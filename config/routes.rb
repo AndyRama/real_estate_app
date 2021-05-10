@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'public#main'
+  root to: 'pages#product'
 
   devise_for :users
 
