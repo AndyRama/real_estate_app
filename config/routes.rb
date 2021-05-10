@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
   root to: 'public#main'
+  devise_for :users
 
   resources :posts
   resources :properties
 
-  devise_for :users
+  resources :products, only: [:index, :show]
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: :new
+  end
+ 
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
 
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy'     
@@ -26,6 +32,6 @@ Rails.application.routes.draw do
   get "/advertise" => "pages#advertise", as: :advertise
   get "/blog" => "posts#latest", as: :blog
   get "/contact" => "pages#contact", as: :contact
-  get "/product" => "pages#product", as: :product  
+  get "/product" => "pages#product"
 
 end

@@ -41,6 +41,12 @@ gem 'fog', '~> 1.37.0'
 # image upload with cloudinary
 gem 'cloudinary', '~> 1.16.0'
 
+# Gemfile Money-rails | Stripe
+gem 'money-rails'
+
+gem 'stripe'
+gem 'stripe_event'
+
 # Map address translate with geocoder
 # gem 'geocoder'
 

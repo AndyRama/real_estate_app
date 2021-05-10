@@ -1,0 +1,24 @@
+<div class="container">
+<h1 class="text-center">MVP Location Property</h1>
+  <div class="row mt-3">
+    <% @products.each do |product| %>
+      <div class="col-6 col-md-4">
+        <div class="card">
+          <%= image_tag product.photo_url , class: "card-img-top" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= product.name %></h5>
+            <p class="card-text"><%= product.category.name %></p>
+           <div class="card-footer d-flex">
+            <div class="card-product-pricing text-success">
+              <h5 id="prix"><%= product.price %>€</h5>
+            <%= link_to product_path(product.id), class:"btn btn-ghost-revert" do %>
+            </div>
+              <i class="fas fa-shopping-cart"></i>
+            <% end %>
+          </div>
+         </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
