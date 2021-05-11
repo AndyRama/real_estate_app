@@ -3,9 +3,30 @@
     <div class="col-md-3"><%= image_tag @order.product.photo_url, width: '100%' %></div>
     <div class="col">
       <h1>Checkout summary</h1>
-      <p>Purchase of <strong><%= @order.product.name %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
-      <button id="pay" class="btn btn-primary">Pay</button>
-      <%# <!-- # Commented for the lecture, remove comments. %>
+      <div class="col-sm-12 col-md-6">
+        <p><strong>About the code:</strong></p>
+
+        <p>- Built with Ruby on Rails 6.
+        <br />- Ready to deploy to live website.
+        <br />- Ready to upload all images in a cloud.
+        <br />- Ready to configure your system of payment.
+        <br />- Ready to configure your system of mailling.
+        <br />- Upload Credit card when user want booking. 
+        <br />- Instructions on how to setup included.</p>
+
+        <p><strong>Functionality included:</strong></p>
+        <p>- Browse existing properties.
+        <br />- Sign up / sign in / forgot password.
+        <br />- Upload new properties.
+        <br />- User can create a post.
+        <br />- User dashboard to view properties.</p>
+
+
+        <p><strong>Need help with your MVP?</strong></p>
+
+        <p>- I can customize product design (add service)</p>
+      <button id="pay" class="btn btn-primary">Pay <strong><%= @order.amount %>€</strong></button>
+     
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
