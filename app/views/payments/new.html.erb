@@ -1,6 +1,16 @@
 <div class="container">
   <div class="row py-4">
-    <div class="col-md-3"><%= image_tag @order.product.photo_url, width: '100%' %></div>
+    <div class="col-md-3">
+      <%= image_tag @order.product.photo_url, width: '100%' %>
+        <p><strong>Included:</strong></p>
+        <p>- Ready to deploy website.
+        <br />- Setup to upload images.
+        <br />- Setup your payment cards.
+        <br />- Setup your system of mailling.
+        <br />- Setup Admin users.
+        <br />- Logo and design.
+        <br />- 1 unit free/dev. service.</p>
+    </div>
     <div class="col">
       <h1>Checkout summary</h1>
       <div class="col-sm-12 col-md-6">
@@ -21,22 +31,23 @@
         <br />- User can create a post.
         <br />- User dashboard to view properties.</p>
 
-
         <p><strong>Need help with your MVP?</strong></p>
 
-        <p>- I can customize product design (add service)</p>
-      <button id="pay" class="btn btn-primary">Pay <strong><%= @order.amount %>€</strong></button>
-     
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @order.checkout_session_id %>'
+        <p>- I can customize product design (1 unit free)</p>
+        <p>- Add a 1 unit for more developement (+150€)</p>
+
+        <button id="pay" class="btn btn-primary">Pay <strong><%= @order.amount %>€</strong></button>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script>
+          const paymentButton = document.getElementById('pay');
+          paymentButton.addEventListener('click', () => {
+            const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+            stripe.redirectToCheckout({
+              sessionId: '<%= @order.checkout_session_id %>'
+            });
           });
-        });
-      </script> 
+        </script> 
+      </div>
     </div>
   </div>
 </div>

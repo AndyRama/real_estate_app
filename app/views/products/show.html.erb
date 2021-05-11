@@ -1,36 +1,37 @@
 <div class="container py-3">
   <div class="row ">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-6 ">
       <%= image_tag(@product.photo_url, width: '100%') %>
+      <p><strong>Need help with your MVP?</strong></p>
+      <p>- I can customize your product design and add others features.</p>
+
+      <p><strong>Next Functionality:</strong></p>
+      <p>- Add a calendar for booking.
+      <br />- Add feature for new map.
+      <br />- Add feature for credit card.</p>
     </div>
     <div class="col-sm-12 col-md-6">
-        <p class="h4 text-uppercase text-orange">Product Details</p>
-        <p class="font-18 text-muted">Get the starter code for your project</p>
-        <p>Allow users to browse existing properties, create an account, sign in and post their own properties. Users can visit their own dashboard to see their properties.</p>
-        <p><strong>Functionality included:</strong></p>
+      <p class="h4 text-uppercase text-orange">Product Details</p>
+      <p class="font-18 text-muted">Get the starter code for your project</p>
+      <p>Allow users to browse existing properties, create an account, sign in and post their own properties. Users can visit their own dashboard to see their properties.</p>
+      <p><strong>Functionality included:</strong></p>
 
-        <p>- Browse existing properties.
-        <br />- Sign up / sign in / forgot password.
-        <br />- Upload new properties.
-        <br />- User dashboard to view properties.</p>
+      <p>- Browse existing properties.
+      <br />- Sign up / sign in / forgot password.
+      <br />- Upload new properties.
+      <br />- User dashboard to view properties.</p>
 
-        <p><strong>About the code:</strong></p>
+      <p><strong>About the code:</strong></p>
 
-        <p>- Built with Ruby on Rails 6.
-        <br />- Ready to deploy to live website.
-        <br />- Ready to upload all images in a cloud.
-        <br />- Instructions on how to setup included.</p>
+      <p>- Built with Ruby on Rails 6.
+      <br />- Ready to deploy to live website.      
+      <br />- Instructions on how to setup included.</p>
 
-        <p><strong>Need help with your MVP?</strong></p>
-
-        <p>- I can customize product design and add others features.</p>
-
-          <%= form_tag orders_path do %>
-            <%= hidden_field_tag 'product_id', @product.id %>
-            <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-          <% end %>
-        </div>
-      </form> 
+      <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'product_id', @product.id %>
+        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>
