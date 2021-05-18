@@ -10,7 +10,7 @@ section#latest-properties {
     height: 170px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    object-fit:cover;
 
     a {
       display: block;
@@ -24,6 +24,7 @@ section#latest-properties {
     background-size: cover;
     margin-bottom: 40px; 
     background-position-y: center;
+    
  }
 
  #prop-details {

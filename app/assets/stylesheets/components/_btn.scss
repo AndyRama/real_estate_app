@@ -1,14 +1,15 @@
 // navbar btn
-#btn-banner {
-  color: black;
-  padding: 10px 24px;
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
-  text-decoration: none;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
   transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
 }
 
-#btn-banner:hover {
-  background: #1BCB7F;
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
