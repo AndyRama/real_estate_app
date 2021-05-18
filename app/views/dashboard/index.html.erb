@@ -30,87 +30,13 @@
       </tr>
     </thead>
     <tbody>
-      <%# <tr>
-        <td>Penthouse @ West End</td>
-        <td>12 Irving street, West End, London, WC2H 7AZ, United K</td>
-        <td>For sale</td>
-        <td>579000 €</td>
-        <td>5</td>
-        <td>2</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>Villa Fina de Alicante</td>
-        <td>Marina Baixa, Alicante, 03509, Spain</td>
-        <td>For sale</td>
-        <td>750000€</td>
-        <td>5</td>
-        <td>2</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>Beautiful house</td>
-        <td>Jalan Sri Wedari, Ubud, Bali, 80571, Indonesia</td>
-        <td>For rent</td>
-        <td>4200€/mount</td>
-        <td>6</td>
-        <td>3</td>
-        <td>3</td>
-      </tr>
-      <tr>
-      <td>Spacious Villa with Pool</td>
-        <td>Gran Vía, 22, Madrid, 28013, Spain</td>
-        <td>For rent</td>
-        <td>5000€/mount</td>
-        <td>5</td>
-        <td>2</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>Pool Villa</td>
-        <td>Carrer de Calàbria, 115, Barcelona, 08015, Spain</td>
-        <td>For sale</td>
-        <td>450000€</td>
-        <td>4</td>
-        <td>2</td>
-        <td>3</td>
-      </tr>
-       <tr>
-        <td>Spacious Apartment</td>
-        <td>18 Irving street, West End Soho, London, WC2H 7AZ, United Kingdom</td>
-        <td>For sale</td>
-        <td>900000€</td>
-        <td>6</td>
-        <td>3</td>
-        <td>2</td>
-      </tr>
-       <tr>
-        <td>Large House with Pool</td>
-        <td>Gran Vía, 12, Madrid, 28013, Spain </td>
-        <td>For rent</td>
-        <td>5200€/mount</td>
-        <td>4</td>
-        <td>2</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>A luxurious Property</td>
-        <td>323 str LA, California, United States</td>
-        <td>For rent</td>
-        <td>8000€/mount</td>
-        <td>6</td>
-        <td>2</td>
-        <td>2</td>
-      </tr> %>
-  
-    <% @properties.each do |property| %>
+      <% @properties.each do |property| %>
       <tr>
         <td><%= property.name %></td>
         <td><%= property.address %></td>
         <td><%= property.price %>€</td>
         <td><%= property.rooms %></td>
-        <td><%= property.bathrooms %></td>
-       
+        <td><%= property.bathrooms %></td>       
       </tr>
     <% end %>
   
