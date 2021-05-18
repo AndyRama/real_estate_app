@@ -61,7 +61,6 @@
   <div class="form-group">
     <%= form.label :photo %>
     <%= form.file_field :photo, class: "form-control"%> 
-    <%#= form.hidden_field :photo_cache %>
     <% if @property.photo.present?%> 
       <%= cl_image_path(@property.photo.key, width: 1200, class: "img-fluid mt-2")%>       
      <% end  %>
@@ -70,7 +69,6 @@
   <div class="form-group">
     <%= form.label :image_int %>
     <%= form.file_field :image_int, class: "form-control"%> 
-    <%#= form.hidden_field :photo_cache %>
     <% if @property.image_int.present?%> 
       <%= cl_image_path(@property.image_int.key, width: 1200, class: "img-fluid mt-2")%>       
      <% end  %>
@@ -79,7 +77,6 @@
    <div class="form-group">
     <%= form.label :image_ext %>
     <%= form.file_field :image_ext, class: "form-control"%> 
-    <%#= form.hidden_field :photo_cache %>
     <% if @property.image_ext.present?%> 
       <%= cl_image_path(@property.image_ext.key, width: 1200, class: "img-fluid mt-2")%>       
      <% end  %>
