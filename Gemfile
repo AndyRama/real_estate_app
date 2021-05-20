@@ -47,9 +47,6 @@ gem 'money-rails'
 gem 'stripe'
 gem 'stripe_event'
 
-#Twilo Send Grid
-gem 'sendgrid-ruby'
-
 # Map address translate with geocoder
 # gem 'geocoder'
 
